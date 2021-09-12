@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<style>
+@import url(assets/css/font-awesome.min.css);
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('images/background.svg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: black;
+  font-family: "Hurme", Hurme, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+a:link {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+a:visited {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+a:active {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+
+.fa-github {
+  color: #e6e6e6;
+}
+.fa-github:hover {
+  color: #bdbdbd;
+}
+
+@font-face { font-family: Hurme; src: url('assets/webfonts/HurmeGeometricSans2.otf'); }
+</style>
+<head>
+  <title>exaloop.io</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
+<body>
+  <div class="bgimg">
+    <div class="topleft">
+      <a class="faicon" href="https://github.com/exaloop" target="_blank">
+        <i class="fab fa-github fa-2x fa-fw"></i>
+      </a>
+    </div>
+    <div class="middle">
+      <img src="images/exaloop.svg" alt="Exaloop logo" height="200px">
+      <hr>
+      <h1>coming soon</h1>
+    </div>
+    <div class="bottomleft">
+      <p><a href="mailto:info@exaloop.io">info@exaloop.io</a></p>
+    </div>
+  </div>
+</body>
+</html>
