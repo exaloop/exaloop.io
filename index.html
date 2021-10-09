@@ -39,24 +39,28 @@ body, html {
   text-align: center;
 }
 
+.info {
+  text-align: left;
+}
+
 hr {
   margin: auto;
   width: 40%;
 }
 
-a:link {
+#mail:link {
   color: #e6e6e6;
   text-decoration: none;
 }
-a:visited {
+#mail:visited {
   color: #e6e6e6;
   text-decoration: none;
 }
-a:hover {
+#mail:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
-a:active {
+#mail:active {
   color: #e6e6e6;
   text-decoration: none;
 }
@@ -87,10 +91,23 @@ a:active {
     <div class="middle">
       <img src="images/exaloop.svg" alt="Exaloop logo" height="200px">
       <hr>
-      <h1>coming soon</h1>
+      <h1>more coming soon</h1>
+      <div class="info">
+        <ul>
+          <li>
+            <a href="https://exaloop.io">Codon</a> &#8212; a high-performance, extensible Python compiler
+          </li>
+          <li>
+            <a href="https://seq-lang.org">Seq</a> &#8212; a genomics and bioinformatics module for Codon
+          </li>
+          <li>
+            <a href="https://asciinema.org/~exaloop">watch a demo</a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="bottomleft">
-      <p><a href="mailto:info@exaloop.io">info@exaloop.io</a></p>
+      <p><a id="mail" href="mailto:info@exaloop.io">info@exaloop.io</a></p>
     </div>
   </div>
 </body>
