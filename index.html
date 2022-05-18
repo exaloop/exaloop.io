@@ -482,7 +482,7 @@ range(10) |> iter |> stirling |> print</code></pre>
 
       <section class="section">
         <div class="container">
-          <header class="section-header" id="about">
+          <header class="section-header" id="jupyter">
             <small>Codon for Data Science</small>
             <br />
             <h1>
@@ -502,63 +502,6 @@ range(10) |> iter |> stirling |> print</code></pre>
           </div>
         </div>
       </section>
-
-      <!--
-      <section class="section">
-        <div class="container">
-          <header class="section-header">
-            <small>Under the Hood</small>
-            <h1>How It Works</h1>
-          </header>
-
-          <div class="row">
-            <div id="how-python" class="col-sm-3 mx-auto text-center">
-              <h3><i class="fa-brands fa-python"></i> Python</h3>
-            </div>
-
-            <div id="how-llvm" class="col-sm-3 mx-auto text-center">
-              <h3><i class="fa-solid fa-dragon"></i> LLVM IR</h3>
-            </div>
-
-            <div id="how-asm" class="col-sm-3 mx-auto text-center">
-              <h3><i class="fa-solid fa-microchip"></i> Native Code</h3>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-3 mx-auto">
-              <pre class="snippet"><code class="language-python">x = 42
-y = x * x</code></pre>
-            </div>
-
-            <div class="col-sm-3 mx-auto">
-              <pre class="snippet"><code class="language-llvm" style="font-size:12px">define i32 @main() {
-  %x = alloca i64
-  %y = alloca i64
-  store i64 42, i64* %x
-  %1 = load i64, i64* %x
-  %2 = load i64, i64* %x
-  %3 = mul nsw i64 %1, %2
-  store i64 %3, i64* %y
-  ret i32 0
-}</code></pre>
-            </div>
-
-            <div class="col-sm-3 mx-auto">
-              <pre class="snippet"><code class="language-x86asm" style="font-size:12px">push rbp
-mov  rbp, rsp
-mov  qword ptr [rbp - 8], 42
-mov  rax, qword ptr [rbp - 8]
-imul rax, qword ptr [rbp - 8]
-mov  qword ptr [rbp - 16], rax
-xor  eax, eax
-pop  rbp
-ret</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-      -->
 
       <section class="section bg-gray">
         <div class="container">
@@ -618,36 +561,5 @@ ret</code></pre>
     <!-- Scripts -->
     <script src="assets/js/page.min.js"></script>
     <script src="assets/js/leader-line.min.js"></script>
-    <script>
-      /*
-      var line1 = new LeaderLine(
-        document.getElementById('how-python'),
-        document.getElementById('how-llvm'),
-        {
-          size: 4,
-          dash: {animation: true},
-          startPlugColor: '#3b89f7',
-          endPlugColor: '#2c42e5',
-          gradient: true
-        }
-      );
-      var line2 = new LeaderLine(
-        document.getElementById('how-llvm'),
-        document.getElementById('how-asm'),
-        {
-          size: 4,
-          dash: {animation: true},
-          startPlugColor: '#3b89f7',
-          endPlugColor: '#2c42e5',
-          gradient: true
-        }
-      );
-
-      document.addEventListener('scroll', function(e) {
-        line1.position();
-        line2.position();
-      });
-      */
-    </script>
   </body>
 </html>
