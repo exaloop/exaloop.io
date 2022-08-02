@@ -359,8 +359,8 @@ for i in range(10):
         <br />
         <div class="row justify-content-md-center">
           <div class="col-sm-5 mx-auto">
-            <pre class="snippet"><code class="language-python">@codon
-def fib(n: int) -> int:
+            <pre class="snippet"><code class="language-python">@codon.jit
+def fib(n):
     return n if n < 2 else fib(n-1) + fib(n-2)</code></pre>
           </div>
         </div>
@@ -372,8 +372,8 @@ def fib(n: int) -> int:
               <div class="collapsible-content">
                 <div class="content-inner">
                   <p>
-                    Within larger Python codebases, Codon can be integrated on a per-function basis via the <code>@codon</code>
-                    annotation to compile and optimize performance-critical segments of code.
+                    Within larger Python codebases, Codon can be integrated on a per-function basis via the <code>@codon.jit</code>
+                    decorator, to compile and optimize performance-critical segments of code.
                   </p>
                 </div>
               </div>
