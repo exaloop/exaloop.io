@@ -47,82 +47,46 @@
         border-color: #ffffff;
       }
 
-      .fade-in-text {
-        animation: fadeIn linear 3s;
-        -webkit-animation: fadeIn linear 3s;
-        -moz-animation: fadeIn linear 3s;
-        -o-animation: fadeIn linear 3s;
-        -ms-animation: fadeIn linear 3s;
-      }
-
-      @keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-
-      @-moz-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-
-      @-webkit-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-
-      @-o-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-      }
-
-      @-ms-keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
+      .btn {
+        text-transform: none;
       }
     </style>
   </head>
 
   <body>
 
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
-      <div class="container">
+    <div id="head">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+          <div class="container">
 
-        <div class="navbar-left">
-          <button class="navbar-toggler" type="button">&#9776;</button>
-          <a class="navbar-brand" href="index.html">
-            <img class="logo-dark" src="assets/img/logo-dark.svg" alt="logo">
-            <img class="logo-light" src="assets/img/logo-light.svg" alt="logo">
-          </a>
-        </div>
+            <div class="navbar-left">
+              <button class="navbar-toggler" type="button">&#9776;</button>
+              <a class="navbar-brand" href="index.html">
+                <img class="logo-dark" src="assets/img/logo-dark.svg" alt="logo">
+                <img class="logo-light" src="assets/img/logo-light.svg" alt="logo">
+              </a>
+            </div>
 
-        <section class="navbar-mobile">
-          <span class="navbar-divider d-mobile-none"></span>
+            <section class="navbar-mobile">
+              <span class="navbar-divider d-mobile-none"></span>
 
-          <nav class="nav nav-navbar">
-            <a class="nav-link" href="index.html#technology">Technology</a>
-            <a class="nav-link" href="https://docs.exaloop.io">Docs</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="https://asciinema.org/~exaloop">Demo</a>
-            <a class="nav-link" href="mailto:info@exaloop.io">Contact</a>
-          </nav>
-        </section>
+              <nav class="nav nav-navbar">
+                <a class="nav-link" href="index.html#technology">Technology</a>
+                <a class="nav-link" href="https://docs.exaloop.io">Docs</a>
+                <a class="nav-link" href="https://docs.exaloop.io/codon/general/faq">FAQ</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="mailto:info@exaloop.io">Contact</a>
+              </nav>
+            </section>
 
-        <a class="btn btn-sm btn-round btn-dark" href="index.html#try">Try It</a>
+            <a class="btn btn-sm btn-round btn-dark" href="https://github.com/exaloop"><i class="fa fa fa-github"></i> GitHub</a>
 
+          </div>
+        </nav><!-- /.navbar -->
       </div>
-    </nav><!-- /.navbar -->
-
-
-    <!-- Header -->
-    <header class="header text-white pt-12 pb-10" style="background-image: linear-gradient(-45deg, #2d42e4 0%, #3b89f7 100%);">
-      <div class="container">
-        <div class="fade-in-text">
-          <h1 class="display-4">Modernizing high-performance computing.</h1>
-        </div>
-      </div>
-    </header><!-- /.header -->
+    </div>
 
 
     <!-- Main Content -->
@@ -226,6 +190,20 @@
               </p>
             </div>
 
+            <div class="col-sm-3 mx-auto text-center">
+              <div class="image round">
+                <img src="assets/img/team/rohit.jpg" width="200" alt="Rohit">
+              </div>
+              <br />
+              <h3><a href="https://www.mit.edu/~rsingh/" target="_blank">Rohit Singh</a></h3>
+              <p style="font-size:15px">
+                Rohit co-founded Tech Square Trading, a quantitative market-neutral equities fund
+                that traded large and mid-cap equities in US, Europe and Japan with a median daily
+                volume of $285M. Rohit also co-founded
+                <a href="https://martini.ai" target="_blank">martini.ai</a> and is currently a research
+                scientist at MIT CSAIL.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -255,8 +233,8 @@
             <div class="nav nav-bold nav-uppercase nav-trim justify-content-lg-center">
               <a class="nav-link" href="index.html#technology">Technology</a>
               <a class="nav-link" href="https://docs.exaloop.io">Docs</a>
+              <a class="nav-link" href="https://docs.exaloop.io/codon/general/faq">FAQ</a>
               <a class="nav-link" href="about.html">About</a>
-              <a class="nav-link" href="https://asciinema.org/~exaloop">Demo</a>
               <a class="nav-link" href="mailto:info@exaloop.io">Contact</a>
             </div>
           </div>
