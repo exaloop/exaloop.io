@@ -229,223 +229,458 @@
         <br />
 
         <div class="container">
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>sum</code></h3>
-              Computes the sum of integers from 1 to 50000000 with
-              a <code>for</code>-loop.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/sum'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
+          <ul class="nav nav-tabs-outline">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#results-speedups">Speedups</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#results-runtimes">Runtimes</a>
+            </li>
+          </ul>
+
+          <br />
+
+          <div class="tab-content text-left" data-aos="fade-in">
+            <div class="tab-pane fade show active" id="results-speedups">
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>sum</code></h3>
+                  Computes the sum of integers from 1 to 50000000 with
+                  a <code>for</code>-loop.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/sum'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-sum"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>float</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#float" target="_blank"><code>pyperformance</code>'s <code>float</code>
+                  benchmark</a> &mdash; performs a series of 3-dimensional vector operations and normalizations.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/float'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-float"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>go</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#go" target="_blank"><code>pyperformance</code>'s <code>go</code>
+                  benchmark</a> &mdash; simulates and optimizes a game of <a href="https://en.wikipedia.org/wiki/Go_(game)" target="_blank">Go</a>.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/go'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-go"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>nbody</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#nbody" target="_blank"><code>pyperformance</code>'s <code>nbody</code>
+                  benchmark</a> &mdash; simulates the movement of several celestial objects.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/nbody'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-nbody"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>chaos</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#chaos" target="_blank"><code>pyperformance</code>'s <code>chaos</code>
+                  benchmark</a> &mdash; generates <a href="https://en.wikipedia.org/wiki/Chaos_game" target="_blank">chaos game</a>-like fractals.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/chaos'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-chaos"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>spectral_norm</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#spectral-norm" target="_blank"><code>pyperformance</code>'s <code>spectral_norm</code>
+                  benchmark</a> &mdash; computes the largest singular value of a particular infinite matrix.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/spectral_norm'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-spectral-norm"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>set_partition</code></h3>
+                  Computes all partitions of a set that fit certain conditions.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/set_partition'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-set-partition"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>primes</code></h3>
+                  Counts prime numbers below a given threshold. <b>Codon version is multi-threaded.</b>
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/primes'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-primes"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>binary_trees</code></h3>
+                  <a href="https://hboehm.info/gc/gc_bench.html" target="_blank">Hans Boehm's binary-trees benchmark</a> &mdash;
+                  creates and traverses a number of binary trees.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/binary_trees'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-binary-trees"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>fannkuch</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#fannkuch" target="_blank"><code>pyperformance</code>'s <code>fannkuch</code>
+                  benchmark</a> &mdash; performs, for each permutation of a list, a number of element reversals until a certain condition is
+                  met, and computes the maximum number of reversals needed across all permutations. <b>Codon version is multi-threaded.</b>
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/fannkuch'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-fannkuch"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>word_count</code></h3>
+                  Counts occurrences of words in a file using a dictionary.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/word_count'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-word-count"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>taq</code></h3>
+                  Performs volume peak detection on an <a href="https://www.nyse.com/market-data/historical/daily-taq" target="_blank">NYSE TAQ</a>.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/taq'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-taq"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>mandelbrot</code></h3>
+                  Computes the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" target="_blank">Mandelbrot set.</a>
+                  <b>Codon version is GPU-accelerated.</b>
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/mandelbrot'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-schart-mandelbrot"></canvas>
+                </div>
               </div>
             </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-sum"></canvas>
+            <div class="tab-pane fade show" id="results-runtimes">
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>sum</code></h3>
+                  Computes the sum of integers from 1 to 50000000 with
+                  a <code>for</code>-loop.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/sum'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-sum"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>float</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#float" target="_blank"><code>pyperformance</code>'s <code>float</code>
+                  benchmark</a> &mdash; performs a series of 3-dimensional vector operations and normalizations.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/float'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-float"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>go</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#go" target="_blank"><code>pyperformance</code>'s <code>go</code>
+                  benchmark</a> &mdash; simulates and optimizes a game of <a href="https://en.wikipedia.org/wiki/Go_(game)" target="_blank">Go</a>.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/go'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-go"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>nbody</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#nbody" target="_blank"><code>pyperformance</code>'s <code>nbody</code>
+                  benchmark</a> &mdash; simulates the movement of several celestial objects.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/nbody'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-nbody"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>chaos</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#chaos" target="_blank"><code>pyperformance</code>'s <code>chaos</code>
+                  benchmark</a> &mdash; generates <a href="https://en.wikipedia.org/wiki/Chaos_game" target="_blank">chaos game</a>-like fractals.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/chaos'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-chaos"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>spectral_norm</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#spectral-norm" target="_blank"><code>pyperformance</code>'s <code>spectral_norm</code>
+                  benchmark</a> &mdash; computes the largest singular value of a particular infinite matrix.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/spectral_norm'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-spectral-norm"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>set_partition</code></h3>
+                  Computes all partitions of a set that fit certain conditions.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/set_partition'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-set-partition"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>primes</code></h3>
+                  Counts prime numbers below a given threshold. <b>Codon version is multi-threaded.</b>
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/primes'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-primes"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>binary_trees</code></h3>
+                  <a href="https://hboehm.info/gc/gc_bench.html" target="_blank">Hans Boehm's binary-trees benchmark</a> &mdash;
+                  creates and traverses a number of binary trees.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/binary_trees'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-binary-trees"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>fannkuch</code></h3>
+                  <a href="https://pyperformance.readthedocs.io/benchmarks.html#fannkuch" target="_blank"><code>pyperformance</code>'s <code>fannkuch</code>
+                  benchmark</a> &mdash; performs, for each permutation of a list, a number of element reversals until a certain condition is
+                  met, and computes the maximum number of reversals needed across all permutations. <b>Codon version is multi-threaded.</b>
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/fannkuch'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-fannkuch"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>word_count</code></h3>
+                  Counts occurrences of words in a file using a dictionary.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/word_count'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-word-count"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>taq</code></h3>
+                  Performs volume peak detection on an <a href="https://www.nyse.com/market-data/historical/daily-taq" target="_blank">NYSE TAQ</a>.
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/taq'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-taq"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-pane">
+                <div class="chart-info">
+                  <h3>Benchmark: <code>mandelbrot</code></h3>
+                  Computes the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" target="_blank">Mandelbrot set.</a>
+                  <b>Codon version is GPU-accelerated.</b>
+                  <br />
+                  <div class="sourcebutton">
+                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/mandelbrot'">
+                      <i class="fab fa-github"></i> See Code
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="bm-chart-mandelbrot"></canvas>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>float</code></h3>
-              <a href="https://pyperformance.readthedocs.io" target="_blank"><code>pyperformance</code></a>'s <code>float</code>
-              benchmark &mdash; performs a series of 3-dimensional vector operations and normalizations.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/float'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-float"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>go</code></h3>
-              <a href="https://pyperformance.readthedocs.io" target="_blank"><code>pyperformance</code></a>'s <code>go</code>
-              benchmark &mdash; simulates and optimizes a game of <a href="https://en.wikipedia.org/wiki/Go_(game)" target="_blank">Go</a>.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/go'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-go"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>nbody</code></h3>
-              <a href="https://pyperformance.readthedocs.io" target="_blank"><code>pyperformance</code></a>'s <code>nbody</code>
-              benchmark &mdash; simulates the movement of several celestial objects.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/nbody'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-nbody"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>chaos</code></h3>
-              <a href="https://pyperformance.readthedocs.io" target="_blank"><code>pyperformance</code></a>'s <code>chaos</code>
-              benchmark &mdash; generates <a href="https://en.wikipedia.org/wiki/Chaos_game" target="_blank">chaos game</a>-like fractals.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/chaos'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-chaos"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>spectral_norm</code></h3>
-              <a href="https://pyperformance.readthedocs.io" target="_blank"><code>pyperformance</code></a>'s <code>spectral_norm</code>
-              benchmark &mdash; computes the largest singular value of a particular infinite matrix.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/spectral_norm'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-spectral-norm"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>set_partition</code></h3>
-              Computes all partitions of a set that fit certain conditions.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/set_partition'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-set-partition"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>primes</code></h3>
-              Counts prime numbers below a given threshold. <b>Codon version is multi-threaded.</b>
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/primes'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-primes"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>binary_trees</code></h3>
-              <a href="https://hboehm.info/gc/gc_bench.html" target="_blank">Hans Boehm's binary-trees benchmark</a> &mdash;
-              creates and traverses a number of binary trees.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/binary_trees'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-binary-trees"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>fannkuch</code></h3>
-              <a href="https://pyperformance.readthedocs.io" target="_blank"><code>pyperformance</code></a>'s <code>fannkuch</code>
-              benchmark &mdash; performs, for each permutation of a list, a number of element reversals until a certain condition is
-              met, and computes the maximum number of reversals needed across all permutations. <b>Codon version is multi-threaded.</b>
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/fannkuch'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-fannkuch"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>word_count</code></h3>
-              Counts occurrences of words in a file using a dictionary.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/word_count'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-word-count"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>taq</code></h3>
-              Performs volume peak detection on an <a href="https://www.nyse.com/market-data/historical/daily-taq" target="_blank">NYSE TAQ</a>.
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/taq'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-taq"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-pane">
-            <div class="chart-info">
-              <h3>Benchmark: <code>mandelbrot</code></h3>
-              Computes the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" target="_blank">Mandelbrot set.</a>
-              <b>Codon version is GPU-accelerated.</b>
-              <br />
-              <div class="sourcebutton">
-                <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/mandelbrot'">
-                  <i class="fab fa-github"></i> See Code
-                </button>
-              </div>
-            </div>
-            <div class="chart-container">
-              <canvas id="bm-chart-mandelbrot"></canvas>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -509,6 +744,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -549,6 +785,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -588,6 +825,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -631,6 +869,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -670,6 +909,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -709,6 +949,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -752,6 +993,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -791,6 +1033,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -834,6 +1077,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -873,6 +1117,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -916,6 +1161,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -959,6 +1205,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -979,7 +1226,7 @@
           }
         }
       });
-      var chart10 = new Chart(document.getElementById("bm-chart-mandelbrot").getContext("2d"), {
+      var chart13 = new Chart(document.getElementById("bm-chart-mandelbrot").getContext("2d"), {
         type: 'bar',
         data: {
           labels: ["Intel Xeon Gold"],
@@ -998,6 +1245,7 @@
           }]
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
           barValueSpacing: 20,
@@ -1007,6 +1255,535 @@
               title: {
                 display: true,
                 text: 'Runtime (s)'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+
+      var schart1 = new Chart(document.getElementById("bm-schart-sum").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [23.52, 51.14173902]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [280374.51, 7.76E+04]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              type: 'logarithmic',
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          },
+        }
+      });
+      var schart2 = new Chart(document.getElementById("bm-schart-float").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [5.34, 5.647676955]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [32.93, 28.3404955]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart3 = new Chart(document.getElementById("bm-schart-go").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [3.47, 3.74297353]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [26.28, 31.31750394]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart4 = new Chart(document.getElementById("bm-schart-nbody").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [12.34, 6.197986294]
+          }, {
+            label: "C++",
+            backgroundColor: "#0E86D4",
+            data: [28.43, 33.37014109]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [27.96, 26.83649913]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart5 = new Chart(document.getElementById("bm-schart-chaos").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [13.20, 11.07391969]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [21.57, 28.87424865]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart6 = new Chart(document.getElementById("bm-schart-spectral-norm").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [68.52, 34.73653933]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [168.99, 164.102348]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart7 = new Chart(document.getElementById("bm-schart-set-partition").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [2.13, 2.071175764]
+          }, {
+            label: "C++",
+            backgroundColor: "#0E86D4",
+            data: [1.89, 4.347644022]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [3.99, 3.349574145]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart8 = new Chart(document.getElementById("bm-schart-primes").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [17.75, 6.103505648]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [356.28, 85.4967441]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              type: 'logarithmic',
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart9 = new Chart(document.getElementById("bm-schart-binary-trees").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [55.49, 43.41675061]
+          }, {
+            label: "C++",
+            backgroundColor: "#0E86D4",
+            data: [47.49, 85.13783614]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [121.00, 78.03047406]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart10 = new Chart(document.getElementById("bm-schart-fannkuch").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [10.75, 7.905508045]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [117.03, 88.63952841]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart11 = new Chart(document.getElementById("bm-schart-word-count").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [0.76, 0.9001581028]
+          }, {
+            label: "C++",
+            backgroundColor: "#0E86D4",
+            data: [1.20, 1.506510775]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [2.76, 2.56776131]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart12 = new Chart(document.getElementById("bm-schart-taq").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Apple M1 Max", "Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0, 1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [1.01, 2.406695847]
+          }, {
+            label: "C++",
+            backgroundColor: "#0E86D4",
+            data: [4.64, 16.83651912]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [12.89, 25.02680056]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Speedup'
+              },
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              fontSize: 15
+            }
+          }
+        }
+      });
+      var schart13 = new Chart(document.getElementById("bm-schart-mandelbrot").getContext("2d"), {
+        type: 'bar',
+        data: {
+          labels: ["Intel Xeon Gold"],
+          datasets: [{
+            label: "Python",
+            backgroundColor: "#003060",
+            data: [1.0]
+          }, {
+            label: "PyPy",
+            backgroundColor: "#055C9D",
+            data: [13.81802626]
+          }, {
+            label: "Codon",
+            backgroundColor: "#68BBE3",
+            data: [14479.25768]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          barValueSpacing: 20,
+          scales: {
+            y: {
+              type: 'logarithmic',
+              title: {
+                display: true,
+                text: 'Speedup'
               },
             },
           },
