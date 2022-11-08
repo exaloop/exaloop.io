@@ -150,6 +150,7 @@
                 <a class="nav-link" href="https://docs.exaloop.io">Docs</a>
                 <a class="nav-link" href="https://blog.exaloop.io">Blog</a>
                 <a class="nav-link" href="https://docs.exaloop.io/codon/general/faq">FAQ</a>
+                <a class="nav-link" href="benchmarks.html">Benchmarks</a>
                 <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="mailto:info@exaloop.io">Contact</a>
               </nav>
@@ -244,23 +245,6 @@
 
           <div class="tab-content text-left" data-aos="fade-in">
             <div class="tab-pane fade show active" id="results-speedups">
-              <div class="chart-pane">
-                <div class="chart-info">
-                  <h3>Benchmark: <code>sum</code></h3>
-                  Computes the sum of integers from 1 to 50000000 with
-                  a <code>for</code>-loop.
-                  <br />
-                  <div class="sourcebutton">
-                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/sum'">
-                      <i class="fab fa-github"></i> See Code
-                    </button>
-                  </div>
-                </div>
-                <div class="chart-container">
-                  <canvas id="bm-schart-sum"></canvas>
-                </div>
-              </div>
-
               <div class="chart-pane">
                 <div class="chart-info">
                   <h3>Benchmark: <code>float</code></h3>
@@ -463,23 +447,6 @@
               </div>
             </div>
             <div class="tab-pane fade show" id="results-runtimes">
-              <div class="chart-pane">
-                <div class="chart-info">
-                  <h3>Benchmark: <code>sum</code></h3>
-                  Computes the sum of integers from 1 to 50000000 with
-                  a <code>for</code>-loop.
-                  <br />
-                  <div class="sourcebutton">
-                    <button class="gotosource" onclick="location.href='https://github.com/exaloop/codon/tree/develop/bench/sum'">
-                      <i class="fab fa-github"></i> See Code
-                    </button>
-                  </div>
-                </div>
-                <div class="chart-container">
-                  <canvas id="bm-chart-sum"></canvas>
-                </div>
-              </div>
-
               <div class="chart-pane">
                 <div class="chart-info">
                   <h3>Benchmark: <code>float</code></h3>
@@ -713,6 +680,7 @@
               <a class="nav-link" href="https://docs.exaloop.io">Docs</a>
               <a class="nav-link" href="https://blog.exaloop.io">Blog</a>
               <a class="nav-link" href="https://docs.exaloop.io/codon/general/faq">FAQ</a>
+              <a class="nav-link" href="benchmarks.html">Benchmarks</a>
               <a class="nav-link" href="about.html">About</a>
               <a class="nav-link" href="mailto:info@exaloop.io">Contact</a>
             </div>
@@ -728,47 +696,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
     <script type="text/javascript">
       Chart.defaults.font.size = 20;
-      var chart1 = new Chart(document.getElementById("bm-chart-sum").getContext("2d"), {
-        type: 'bar',
-        data: {
-          labels: ["Apple M1 Max", "Intel Xeon Gold"],
-          datasets: [{
-            label: "Python",
-            backgroundColor: "#003060",
-            data: [2.540167809, 5.091063023]
-          }, {
-            label: "PyPy",
-            backgroundColor: "#055C9D",
-            data: [0.1080040932, 0.09954810143]
-          }, {
-            label: "Codon",
-            backgroundColor: "#68BBE3",
-            data: [0.00000905991, 0.0000655651]
-          }]
-        },
-        options: {
-          animation: false,
-          responsive: true,
-          maintainAspectRatio: false,
-          barValueSpacing: 20,
-          scales: {
-            y: {
-              type: 'logarithmic',
-              beginAtZero: true,
-              title: {
-                display: true,
-                text: 'Runtime (s)'
-              },
-            },
-          },
-          legend: {
-            display: true,
-            labels: {
-              fontSize: 15
-            }
-          },
-        }
-      });
       var chart2 = new Chart(document.getElementById("bm-chart-float").getContext("2d"), {
         type: 'bar',
         data: {
@@ -1267,47 +1194,6 @@
               fontSize: 15
             }
           }
-        }
-      });
-
-      var schart1 = new Chart(document.getElementById("bm-schart-sum").getContext("2d"), {
-        type: 'bar',
-        data: {
-          labels: ["Apple M1 Max", "Intel Xeon Gold"],
-          datasets: [{
-            label: "Python",
-            backgroundColor: "#003060",
-            data: [1.0, 1.0]
-          }, {
-            label: "PyPy",
-            backgroundColor: "#055C9D",
-            data: [23.52, 51.14173902]
-          }, {
-            label: "Codon",
-            backgroundColor: "#68BBE3",
-            data: [280374.51, 7.76E+04]
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          barValueSpacing: 20,
-          scales: {
-            y: {
-              type: 'logarithmic',
-              beginAtZero: true,
-              title: {
-                display: true,
-                text: 'Speedup'
-              },
-            },
-          },
-          legend: {
-            display: true,
-            labels: {
-              fontSize: 15
-            }
-          },
         }
       });
       var schart2 = new Chart(document.getElementById("bm-schart-float").getContext("2d"), {
