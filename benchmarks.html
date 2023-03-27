@@ -240,6 +240,7 @@
             </li>
           </ul>
 
+          <div class="text-center" id="compare-text"><strong>Larger is better</strong></div>
           <br />
 
           <div class="tab-content text-left" data-aos="fade-in">
@@ -1681,6 +1682,15 @@
             }
           }
         }
+      });
+      document.querySelectorAll('.nav-link').forEach(tab => {
+        tab.addEventListener('click', () => {
+          if (tab.textContent == "Runtimes") {
+            document.getElementById("compare-text").innerHTML = "<strong>Smaller is better</strong>";
+          } else if (tab.textContent == "Speedups") {
+            document.getElementById("compare-text").innerHTML = "<strong>Larger is better</strong>";
+          }
+        });
       });
     </script>
   </body>
